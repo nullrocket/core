@@ -213,6 +213,7 @@ exports.mixin = {
      * @desc Initialize the scroll bars.
      */
     initScrollbars: function() {
+        let Scrollbar = this.modules.Scrollbar;
         if (this.sbHScroller && this.sbVScroller){
             return;
         }
