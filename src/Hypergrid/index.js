@@ -625,8 +625,8 @@ var Hypergrid = Base.extend('Hypergrid', {
                 var columns = this.behavior.getColumns();
                 Object.keys(calculators).forEach(function(key) {
                     if (!columns.find(function(column) {
-                            return column.properties.calculator === calculators[key];
-                        })) {
+                        return column.properties.calculator === calculators[key];
+                    })) {
                         delete calculators[key];
                     }
                 });
@@ -834,7 +834,7 @@ var Hypergrid = Base.extend('Hypergrid', {
      */
     setValue: function(x, y, value, dataModel) {
         this.behavior.setValue(x, y, value, dataModel);
-     },
+    },
 
     /**
      * @memberOf Hypergrid#
@@ -1001,7 +1001,7 @@ var Hypergrid = Base.extend('Hypergrid', {
             div.style.height = null; // revert to stylesheet value
         }
 
-        injectCSS('grid');
+        //      injectCSS('grid');
 
         //prevent the default context menu for appearing
         div.oncontextmenu = function(event) {
