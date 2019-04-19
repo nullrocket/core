@@ -863,9 +863,7 @@ var Renderer = Base.extend('Renderer', {
                     userDataAreaTop = firstDataRow && firstDataRow.top,
                     top = gridProps.gridLinesColumnHeader ? 0 : userDataAreaTop,
                     bottom = gridProps.gridLinesUserDataArea ? viewHeight : lastHeaderRow && lastHeaderRow.bottom;
-console.log('here',top,bottom)
                 if (top !== undefined && bottom !== undefined) { // either undefined means nothing to draw
-    console.log('not here?');
     gc.cache.fillStyle = gridLinesVColor;
 
                     visibleColumns.forEachWithNeg(function(vc, c) {
@@ -924,9 +922,12 @@ console.log('here',top,bottom)
                     gc.cache.fillStyle = gridProps.fixedLinesHColor || gridLinesHColor;
                     edgeWidth = gridProps.fixedLinesHEdge;
                     if (edgeWidth) {
+                        console.log('edgeWidth',gap.top,gap.bottom,viewWidth,edgeWidth)
                         gc.fillRect(0, gap.top, viewWidth, edgeWidth);
                         gc.fillRect(0, gap.bottom - edgeWidth, viewWidth, edgeWidth);
                     } else {
+                        console.log('noEdgeWidth')
+                        console.log('edgeWidth',gap.top,viewWidth,gap.bottom,gap.bottom)
                         gc.fillRect(0, gap.top, viewWidth, gap.bottom - gap.top);
                     }
                 }
