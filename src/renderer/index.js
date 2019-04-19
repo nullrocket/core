@@ -922,7 +922,7 @@ var Renderer = Base.extend('Renderer', {
                     gc.cache.fillStyle = gridProps.fixedLinesHColor || gridLinesHColor;
                     edgeWidth = gridProps.fixedLinesHEdge;
                     if (edgeWidth) {
-                        console.log('edgeWidth',gap.top,gap.bottom,viewWidth,edgeWidth)
+                        console.log('edgeWidth',gap.top, viewWidth, edgeWidth)
                         gc.fillRect(0, gap.top, viewWidth, edgeWidth);
                         gc.fillRect(0, gap.bottom - edgeWidth, viewWidth, edgeWidth);
                     } else {
