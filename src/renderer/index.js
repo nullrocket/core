@@ -863,9 +863,10 @@ var Renderer = Base.extend('Renderer', {
                     userDataAreaTop = firstDataRow && firstDataRow.top,
                     top = gridProps.gridLinesColumnHeader ? 0 : userDataAreaTop,
                     bottom = gridProps.gridLinesUserDataArea ? viewHeight : lastHeaderRow && lastHeaderRow.bottom;
-
+console.log('here',top,bottom)
                 if (top !== undefined && bottom !== undefined) { // either undefined means nothing to draw
-                    gc.cache.fillStyle = gridLinesVColor;
+    console.log('not here?');
+    gc.cache.fillStyle = gridLinesVColor;
 
                     visibleColumns.forEachWithNeg(function(vc, c) {
                         if (
