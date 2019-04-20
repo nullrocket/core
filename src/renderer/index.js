@@ -941,7 +941,7 @@ var Renderer = Base.extend('Renderer', {
                         gc.fillRect(gap.left, 0, edgeWidth, viewHeight);
                         gc.fillRect(gap.right - edgeWidth, 0, edgeWidth, viewHeight);
                     } else {
-                        gc.fillRect(gap.left, 0, gap.right - gap.left, viewHeight);
+                        gc.fillRect(gap.left, 0, gap.right - gap.left, viewHeight +1);
                     }
                 }
             }
