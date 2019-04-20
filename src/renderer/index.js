@@ -922,12 +922,11 @@ var Renderer = Base.extend('Renderer', {
                     gc.cache.fillStyle = gridProps.fixedLinesHColor || gridLinesHColor;
                     edgeWidth = gridProps.fixedLinesHEdge;
                     if (edgeWidth) {
-                        console.log('edgeWidth',gap.top, viewWidth, edgeWidth)
+
                         gc.fillRect(0, gap.top, viewWidth, edgeWidth);
                         gc.fillRect(0, gap.bottom - edgeWidth, viewWidth, edgeWidth);
                     } else {
 
-                        console.log('noEdgeWidth',gap.top, viewWidth, gap.bottom - gap.top);
                         gc.fillRect(0, gap.top, viewWidth, gap.bottom - gap.top +1);
                     }
                 }
@@ -938,11 +937,9 @@ var Renderer = Base.extend('Renderer', {
                     gc.cache.fillStyle = gridProps.fixedLinesVColor || gridLinesVColor;
                     edgeWidth = gridProps.fixedLinesVEdge;
                     if (edgeWidth) {
-                        gc.fillStyle="blue";
                         gc.fillRect(gap.left, 0, edgeWidth, viewHeight);
                         gc.fillRect(gap.right - edgeWidth, 0, edgeWidth, viewHeight);
                     } else {
-                        gc.fillStyle = "red";
                         gc.fillRect(gap.left, 0, gap.right - gap.left, viewHeight +1);
                     }
                 }
