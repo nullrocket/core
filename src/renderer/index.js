@@ -927,7 +927,7 @@ var Renderer = Base.extend('Renderer', {
                         gc.fillRect(0, gap.bottom - edgeWidth, viewWidth, edgeWidth);
                     } else {
 
-                        gc.fillRect(0, gap.top, viewWidth, gap.bottom - gap.top +1);
+                        gc.fillRect(0, gap.top, viewWidth, gap.bottom - gap.top );
                     }
                 }
             }
@@ -940,7 +940,7 @@ var Renderer = Base.extend('Renderer', {
                         gc.fillRect(gap.left, 0, edgeWidth, viewHeight);
                         gc.fillRect(gap.right - edgeWidth, 0, edgeWidth, viewHeight);
                     } else {
-                        gc.fillRect(gap.left, 0, gap.right - gap.left, viewHeight +1);
+                        gc.fillRect(gap.left, 0, gap.right - gap.left, viewHeight );
                     }
                 }
             }
