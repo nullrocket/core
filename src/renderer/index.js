@@ -904,13 +904,13 @@ var Renderer = Base.extend('Renderer', {
                 gc.cache.fillStyle = gridLinesHColor;
 
                 visibleRows.forEach(function(vr, r) {
-                    if (r < R1) { // don't draw rule below last row
+                //    if (r < R1) { // don't draw rule below last row
                         var y = vr.bottom;
                         if (borderBox) {
                             y -= gridLinesHWidth;
                         }
                         gc.fillRect(left, y, right - left, gridLinesHWidth);
-                    }
+                  //  }
                 });
             }
 
@@ -938,9 +938,11 @@ var Renderer = Base.extend('Renderer', {
                     gc.cache.fillStyle = gridProps.fixedLinesVColor || gridLinesVColor;
                     edgeWidth = gridProps.fixedLinesVEdge;
                     if (edgeWidth) {
+                        gc.fillStyle="blue";
                         gc.fillRect(gap.left, 0, edgeWidth, viewHeight);
                         gc.fillRect(gap.right - edgeWidth, 0, edgeWidth, viewHeight);
                     } else {
+                        gc.fillStyle = "red";
                         gc.fillRect(gap.left, 0, gap.right - gap.left, viewHeight +1);
                     }
                 }
