@@ -353,7 +353,6 @@ exports.mixin = {
         },0);
 
 
-        console.log('realColumnWidths', realColumnWidths);
 
         // inform scroll bars
         if ( this.sbHScroller ) {
