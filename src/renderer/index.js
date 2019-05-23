@@ -571,7 +571,11 @@ var Renderer = Base.extend('Renderer', {
             grid = this.grid,
             gridProps = grid.properties,
             sm = grid.selectionModel;
-
+        if(!
+        this.visibleRows[this.visibleRows.length - 1])
+        {
+            return;
+        }
         switch (sm.getLastSelectionType()) {
             case 'column':
                 var columnSelections = sm.columnSelectionModel.selection,
